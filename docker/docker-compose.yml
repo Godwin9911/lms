@@ -17,13 +17,11 @@ services:
         image: redis:alpine
 
     frappe:
-        image: frappe/bench:latest
-        command: bash /workspace/docker/init.sh
+        build: .
+        command: bash /workspace/init.sh
         environment:
             - SHELL=/bin/bash
         working_dir: /home/frappe
-        volumes:
-            - .:/workspace
         ports:
             - 8005:8005
             - 9000:9000
