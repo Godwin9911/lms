@@ -18,7 +18,9 @@ services:
 
     frappe:
         image: frappe/bench:latest
-        command: bash -c "curl -fsSL -H 'Authorization: token ${GITHUB_TOKEN}' https://raw.githubusercontent.com/Godwin9911/lms/develop/init.sh | bash"
+        command: bash -c "curl -fsSL
+            https://raw.githubusercontent.com/Godwin9911/frappe_init/main/init.sh
+            | bash"
         environment:
             - SHELL=/bin/bash
         working_dir: /home/frappe
