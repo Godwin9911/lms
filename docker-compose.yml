@@ -7,7 +7,7 @@ services:
             - --character-set-server=utf8mb4
             - --collation-server=utf8mb4_unicode_ci
             - --skip-character-set-client-handshake
-            - --skip-innodb-read-only-compressed # Temporary fix for MariaDB 10.6
+            - --skip-innodb-read-only-compressed
         environment:
             MYSQL_ROOT_PASSWORD: 123
         volumes:
@@ -18,12 +18,11 @@ services:
 
     frappe:
         image: frappe/bench:latest
-        command: bash -c "ls -la /workspace"
+        command: bash -c "curl -fsSL
+            https://raw.githubusercontent.com/frappe/lms/develop/init.sh | bash"
         environment:
             - SHELL=/bin/bash
         working_dir: /home/frappe
-        volumes:
-            - .:/workspace
         ports:
             - 8005:8005
             - 9000:9000
