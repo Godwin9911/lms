@@ -14,7 +14,7 @@ export default defineConfig({
 		openMode: 0,
 	},
 	e2e: {
-		baseUrl: "http://pertest:8005",
+		baseUrl: "http://pertest:8000",
 		setupNodeEvents(on, config) {
 			// Splitting tests only works when Cypress Cloud is not orchestrating parallel runs.
 			if (process.env.CYPRESS_CLOUD_PARALLEL !== "1") {

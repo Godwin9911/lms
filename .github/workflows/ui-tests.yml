@@ -113,7 +113,7 @@ jobs:
       - name: UI Tests
         run: cd ~/frappe-bench/ && bench --site lms.test run-ui-tests lms --headless
         env:
-          CYPRESS_BASE_URL: http://lms.test:8005
+          CYPRESS_BASE_URL: http://lms.test:8000
           CYPRESS_RECORD_KEY: 095366ec-7b9f-41bd-aeec-03bb76d627fe
           SPLIT: ${{ strategy.job-total }}
           SPLIT_INDEX: ${{ strategy.job-index }}

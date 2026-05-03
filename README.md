@@ -145,7 +145,7 @@ You need Docker, docker-compose and git setup on your machine. Refer [Docker doc
 
     docker compose up -d
 
-**Step 3**: The site [http://lms.localhost:8005/lms](http://lms.localhost:8005/lms) should now be available. The default credentials are:
+**Step 3**: The site [http://lms.localhost:8000/lms](http://lms.localhost:8000/lms) should now be available. The default credentials are:
 
 -   Username: Administrator
 -   Password: admin
@@ -170,7 +170,7 @@ To setup the repository locally follow the steps mentioned below:
 
     ```
 
-1. Now open the URL `http://learning.test:8005/lms` in your browser, you should see the app running
+1. Now open the URL `http://learning.test:8000/lms` in your browser, you should see the app running
 
 ## Learn and connect
 
