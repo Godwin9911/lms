@@ -27,6 +27,10 @@ services:
         ports:
             - 8005:8000
             - 9000:9000
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.frappe.rule=Host(`lms.stevesbbs.com`)"
+            - "traefik.http.services.frappe.loadbalancer.server.port=8000"
 
 volumes:
     mariadb-data:
