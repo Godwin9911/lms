@@ -29,7 +29,7 @@ services:
             - 9000:9000
         labels:
             - "traefik.enable=true"
-            - "traefik.http.routers.frappe.rule=Host(`lms.stevesbbs.com`)"
+            - "traefik.http.routers.frappe.rule=Host(`frappe.stevesbbs.com`)"
             - "traefik.http.services.frappe.loadbalancer.server.port=8000"
 
 volumes:

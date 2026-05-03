@@ -26,6 +26,7 @@ sed -i '/watch/d' ./Procfile
 
 bench get-app payments
 bench get-app lms
+bench get-app wiki
 
 bench new-site lms.localhost \
 --force \
@@ -35,6 +36,7 @@ bench new-site lms.localhost \
 
 bench --site lms.localhost install-app payments
 bench --site lms.localhost install-app lms
+bench --site lms.localhost install-app wiki
 bench --site lms.localhost set-config developer_mode 1
 bench --site lms.localhost clear-cache
 bench use lms.localhost
