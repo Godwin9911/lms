@@ -19,8 +19,7 @@ services:
     frappe:
         image: frappe/bench:latest
         command: bash -c "curl -fsSL
-            https://raw.githubusercontent.com/frappe/lms/develop/docker/init.sh
-            | bash
+            https://raw.githubusercontent.com/frappe/lms/develop/init.sh | bash"
         environment:
             - SHELL=/bin/bash
         working_dir: /home/frappe
