@@ -24,13 +24,19 @@ services:
         environment:
             - SHELL=/bin/bash
         working_dir: /home/frappe
+        volumes:
+            - frappe-bench:/home/frappe
         ports:
             - 8005:8000
             - 9000:9000
         labels:
             - "traefik.enable=true"
             - "traefik.http.routers.frappe.rule=Host(`frappe.stevesbbs.com`)"
+            - "traefik.http.routers.frappe.entrypoints=https"
+            - "traefik.http.routers.frappe.tls=true"
+            - "traefik.http.routers.frappe.tls.certresolver=letsencrypt"
             - "traefik.http.services.frappe.loadbalancer.server.port=8000"
 
 volumes:
     mariadb-data:
+    frappe-bench:
