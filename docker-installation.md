@@ -14,7 +14,7 @@ $ cd docker
 $ docker-compose up
 ```
 
-**Step 3:** Visit the website at http://localhost:8000/
+**Step 3:** Visit the website at http://localhost:8005/
 
 You'll have to go through the setup wizard to setup the website for the first time you access it. Login using the following credentiasl to complete the setup wizard.
 
