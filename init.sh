@@ -26,7 +26,7 @@ sed -i '/watch/d' ./Procfile
 
 bench get-app payments
 bench get-app lms
-bench get-app wiki
+bench get-app https://github.com/Godwin9911/wiki --branch develop
 
 bench new-site lms.localhost \
 --force \

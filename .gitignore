@@ -15,3 +15,6 @@ lms/www/lms.html
 lms/www/_lms.html
 frappe-ui
 frappe-semgrep-rules
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
